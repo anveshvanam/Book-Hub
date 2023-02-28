@@ -1,0 +1,115 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.image-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+}
+
+.website-logo {
+  width: 150px;
+  height: 40px;
+  align-self: center;
+  margin-bottom: 30px;
+}
+
+.bookhub-image {
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+  background-color: #ffffff;
+  height: 700px;
+  padding: 10%;
+}
+
+.login-form-container {
+  background-color: #e5e5e5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.input {
+  height: 40px;
+  background-color: #ffffff;
+  border: 1px solid ##c3cad9;
+  border-radius: 7px;
+}
+
+.label {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  color: #5a7184;
+}
+
+.login-button {
+  background-color: #0284c7;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 5px;
+  height: 40px;
+  margin-top: 40px;
+  padding: 5px;
+  border: 0px;
+  font-size: 17px;
+  align-self: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    max-height: 100vh;
+    justify-content: center;
+  }
+  .image-logo-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 400px;
+    margin-bottom: 0px;
+  }
+  .bookhub-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 180px;
+  }
+  .login-form-container {
+    width: 100%;
+    background-color: #ffffff;
+    height: 500px;
+    justify-content: flex-start;
+  }
+  .login-form {
+    width: 100%;
+    height: 500px;
+    margin-top: 0px;
+  }
+  .website-logo {
+    margin: 0px;
+  }
+}
+
+.error-message {
+  color: crimson;
+}
