@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
-
+import Loader from 'react-loader-spinner'
 import {Link} from 'react-router-dom'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -77,6 +77,26 @@ class Home extends Component {
     }
   }
 
+  renderSliderLoadingView = () => (
+    <div className="loader-container" testid="loader">
+      <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
+    </div>
+  )
+
+  renderSlider = () => {
+    const {apiStatus} = this.state
+
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderSliderSuccessView()
+      case apiStatusConstants.inProgress:
+        return this.renderSliderLoadingView()
+
+      default:
+        return null
+    }
+  }
+
   renderSliderSuccessView = () => {
     const {booksList} = this.state
 
@@ -139,9 +159,7 @@ class Home extends Component {
                   Find Books
                 </button>
               </div>
-              <div className="slick-container">
-                {this.renderSliderSuccessView()}
-              </div>
+              <div className="slick-container">{this.renderSlider()}</div>
             </div>
           </div>
         </div>
