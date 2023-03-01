@@ -4,6 +4,7 @@ import Cookies from 'js-cookie'
 
 import {Link} from 'react-router-dom'
 import Header from '../Header'
+import Footer from '../Footer'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
@@ -144,6 +145,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </>
     )
   }

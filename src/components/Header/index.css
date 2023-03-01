@@ -7,10 +7,11 @@
   padding: 0px 10% 0px 10%;
 }
 
-.nav-links-container {
+.tabs-container {
   display: flex;
   justify-content: space-between;
   width: 25%;
+  list-style-type: none;
   align-items: center;
 }
 
@@ -20,6 +21,7 @@
   height: 35px;
   border: 0px;
   border-radius: 5px;
+  cursor: pointer;
   color: #ffffff;
 }
 
@@ -30,4 +32,60 @@
 
 .website-logo {
   margin: 10px;
+}
+
+.active-tab {
+  color: #0284c7;
+}
+
+.tab-list-item {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.hamburger-menu-button {
+  background-color: transparent;
+  border: 0px;
+  display: none;
+  cursor: pointer;
+}
+.menu-icon {
+  font-size: 22px;
+}
+
+.responsive-menu-tabs-container {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.responsive-tabs-container {
+  display: none;
+}
+
+.hamburger-menu-button {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .website-logo {
+    width: 90px;
+    height: 30px;
+  }
+  .header-container {
+    padding: 10px;
+    margin: 0px;
+    height: 70px;
+  }
+  .tabs-container {
+    display: none;
+  }
+  .responsive-tabs-container {
+    display: block;
+  }
+  .hamburger-menu-button {
+    display: block;
+  }
 }

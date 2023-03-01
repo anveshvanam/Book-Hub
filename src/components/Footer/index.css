@@ -1,0 +1,44 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+
+.footer-contacts-list {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  align-items: center;
+  list-style-type: none;
+}
+
+.contact-us {
+  color: #3d3c3c;
+  font-size: 16px;
+  align-self: center;
+  width: 200px;
+  text-align: center;
+  padding-left: 40px;
+}
+
+.footer-icon {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    padding: 0px;
+  }
+  .footer-contacts-list {
+    width: 50%;
+    margin-right: 40px;
+  }
+  .contact-us {
+    padding: 0px;
+  }
+}
