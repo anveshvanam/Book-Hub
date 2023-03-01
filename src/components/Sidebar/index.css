@@ -1,0 +1,38 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0px;
+  align-items: flex-start;
+  padding-left: 0px;
+}
+
+.filters-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 170px;
+  width: 80%;
+  margin-left: 0px;
+}
+
+.filter-button {
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  align-self: flex-start;
+  width: 100%;
+  font-size: 16px;
+  text-align: left;
+
+  margin: 0px;
+}
+
+.filter-item {
+  width: 100%;
+  margin: 0px;
+  align-items: flex-start;
+  align-self: flex-start;
+}
