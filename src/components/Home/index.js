@@ -1,7 +1,9 @@
 import {Component} from 'react'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
+
 import {Link} from 'react-router-dom'
+import Header from '../Header'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './index.css'
@@ -106,40 +108,43 @@ class Home extends Component {
     const {apiStatus} = this.state
 
     return (
-      <div className="home-page-bg-container">
-        <h1 className="home-heading" key="title">
-          Find Your Next Favorite Books?
-        </h1>
-        <p className="home-paragraph">
-          You are in the right place. Tell us what titles or genres you have
-          enjoyed in the past, and we will give you surprisingly insightful
-          recommendations.
-        </p>
-        <button
-          className="home-find-books-btn books-responsive-btn-sm"
-          type="button"
-          onClick={this.onClickFindBooks}
-        >
-          Find Books
-        </button>
-        <div>
-          <div className="home-top-rated-container">
-            <div className="top-rated-heading-container">
-              <h1 className="top-rated-heading">Top Rated Books</h1>
-              <button
-                className="home-find-books-btn books-responsive-btn-lg"
-                type="button"
-                onClick={this.onClickFindBooks}
-              >
-                Find Books
-              </button>
-            </div>
-            <div className="slick-container">
-              {this.renderSliderSuccessView()}
+      <>
+        <Header home />
+        <div className="home-page-bg-container">
+          <h1 className="home-heading" key="title">
+            Find Your Next Favorite Books?
+          </h1>
+          <p className="home-paragraph">
+            You are in the right place. Tell us what titles or genres you have
+            enjoyed in the past, and we will give you surprisingly insightful
+            recommendations.
+          </p>
+          <button
+            className="home-find-books-btn books-responsive-btn-sm"
+            type="button"
+            onClick={this.onClickFindBooks}
+          >
+            Find Books
+          </button>
+          <div>
+            <div className="home-top-rated-container">
+              <div className="top-rated-heading-container">
+                <h1 className="top-rated-heading">Top Rated Books</h1>
+                <button
+                  className="home-find-books-btn books-responsive-btn-lg"
+                  type="button"
+                  onClick={this.onClickFindBooks}
+                >
+                  Find Books
+                </button>
+              </div>
+              <div className="slick-container">
+                {this.renderSliderSuccessView()}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

@@ -1,0 +1,33 @@
+.header-container {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10% 0px 10%;
+}
+
+.nav-links-container {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  align-items: center;
+}
+
+.logout-button {
+  background-color: #0284c7;
+  width: 100px;
+  height: 35px;
+  border: 0px;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #64748b;
+}
+
+.website-logo {
+  margin: 10px;
+}
