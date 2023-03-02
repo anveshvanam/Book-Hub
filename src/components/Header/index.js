@@ -42,7 +42,7 @@ class Header extends Component {
             <Link to="/" className="nav-link">
               <li className={`tab-list-item ${activeHome}`}>Home</li>
             </Link>
-            <Link to="/" className="nav-link">
+            <Link to="/bookshelf" className="nav-link">
               <li className={`tab-list-item ${activeBookshelves} `}>
                 Bookshelves
               </li>
@@ -71,7 +71,7 @@ class Header extends Component {
             <Link to="/" className="nav-link">
               <li className={`tab-list-item ${activeHome}`}>Home</li>
             </Link>
-            <Link to="/" className="nav-link">
+            <Link to="/bookshelf" className="nav-link">
               <li className={`tab-list-item ${activeBookshelves} `}>
                 Bookshelves
               </li>

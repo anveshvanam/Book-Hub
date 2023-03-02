@@ -18,6 +18,8 @@
   flex-direction: column;
   width: 75%;
   background-color: #f5f7fa;
+  margin-top: 40px;
+  align-items: flex-start;
 }
 
 .filter-name-search-container {
@@ -42,4 +44,31 @@
   height: 36px;
   width: 250px;
   border: 1px solid #cbd5e1;
+}
+
+.failure-container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-failure-btn {
+  background-color: #0284c7;
+  width: 112px;
+  height: 48px;
+  border: 0px;
+  cursor: pointer;
+}
+
+.books-failure-image {
+  width: 500px;
+  height: 250px;
+}
+
+.books-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }

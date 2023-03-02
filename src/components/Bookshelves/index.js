@@ -2,6 +2,8 @@ import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import {BsSearch} from 'react-icons/bs'
+import BookItem from '../BookItem'
+import Footer from '../Footer'
 import Sidebar from '../Sidebar'
 import Header from '../Header'
 import './index.css'
@@ -62,6 +64,11 @@ class BookShelves extends Component {
     readStatus: books.read_status,
   })
 
+  onSubmitSearch = event => {
+    event.preventDefault()
+    this.getBooks()
+  }
+
   getBooks = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const {searchText, activeTab} = this.state
@@ -94,14 +101,78 @@ class BookShelves extends Component {
     }
   }
 
+  renderFailureView = () => (
+    <div className="failure-container">
+      <img
+        className="books-failure-image"
+        src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+        alt="failure view"
+      />
+      <p className="books-failure-heading">
+        Something went wrong. Please try Again.
+      </p>
+      <button
+        className="books-failure-btn"
+        onClick={this.onClickRetry}
+        type="button"
+      >
+        Try Again
+      </button>
+    </div>
+  )
+
+  renderNoBooksView = () => {
+    const {searchText} = this.state
+    return (
+      <div className="no-match-found-container">
+        <img
+          className="no-match-image"
+          src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+          alt="no books"
+        />
+        <p className="no-match-paragraph">
+          Your search for {searchText} did not find any matches.
+        </p>
+      </div>
+    )
+  }
+
+  renderBooksSuccessView = () => {
+    const {booksList} = this.state
+    return (
+      <>
+        {booksList.length > 0
+          ? booksList.map(eachItem => (
+              <BookItem itemDetails={eachItem} key={eachItem.id} />
+            ))
+          : this.renderNoBooksView()}
+      </>
+    )
+  }
+
   renderLoadingView = () => (
     <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
     </div>
   )
 
+  renderBooks = () => {
+    const {apiStatus} = this.state
+
+    switch (apiStatus) {
+      case apiStatusConstants.success:
+        return this.renderBooksSuccessView()
+      case apiStatusConstants.inProgress:
+        return this.renderLoadingView()
+      case apiStatusConstants.failure:
+        return this.renderFailureView()
+      default:
+        return null
+    }
+  }
+
   render() {
-    const {activeTabName} = this.state
+    const {activeTabName, booksList} = this.state
 
     return (
       <>
@@ -113,18 +184,22 @@ class BookShelves extends Component {
           <div className="bookshelves-main-container">
             <div className="filter-name-search-container">
               <h1 className="heading">{activeTabName} Books</h1>
-              <div className="search-container">
+              <form className="search-container" onSubmit={this.onSubmitSearch}>
                 <input
                   type="search"
                   className="search-input"
                   placeholder="Search"
                   onChange={this.onChangeSearchInput}
                 />
-                <BsSearch className="search-icon" />
-              </div>
+                <button type="submit" className="search-button">
+                  <BsSearch className="search-icon" />
+                </button>
+              </form>
             </div>
+            <ul className="books-container">{this.renderBooks()}</ul>
           </div>
         </div>
+        <Footer />
       </>
     )
   }

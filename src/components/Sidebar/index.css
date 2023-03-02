@@ -1,7 +1,7 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   margin: 0px;
   align-items: flex-start;
   padding-left: 0px;
@@ -14,7 +14,7 @@
   justify-content: space-between;
   align-items: flex-start;
   height: 170px;
-  width: 80%;
+  width: 100%;
   margin-left: 0px;
 }
 
@@ -25,6 +25,7 @@
   align-self: flex-start;
   width: 100%;
   font-size: 16px;
+  color: #475569;
   text-align: left;
 
   margin: 0px;
@@ -35,4 +36,11 @@
   margin: 0px;
   align-items: flex-start;
   align-self: flex-start;
+}
+
+.bookshelves-heading {
+  color: #334155;
+  width: 100%;
+  font-size: 20px;
+  padding: 40px;
 }

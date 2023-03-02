@@ -8,7 +8,7 @@ const Sidebar = props => {
       <h1 className="bookshelves-heading">Bookshelves</h1>
       <ul className="filters-list">
         {bookshelvesList.map(eachItem => (
-          <li className="filter-item">
+          <li className="filter-item" key={eachItem.id}>
             <button type="button" className="filter-button">
               {eachItem.label}
             </button>
