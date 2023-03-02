@@ -69,6 +69,10 @@ class BookShelves extends Component {
     this.getBooks()
   }
 
+  updateActiveTab = filter => {
+    this.setState({activeTab: filter})
+  }
+
   getBooks = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const {searchText, activeTab} = this.state
@@ -179,7 +183,10 @@ class BookShelves extends Component {
         <Header bookshelves />
         <div className="bookshelves-bg-container">
           <div className="sidebar-container">
-            <Sidebar bookshelvesList={bookshelvesList} />
+            <Sidebar
+              bookshelvesList={bookshelvesList}
+              updateActiveTab={this.updateActiveTab}
+            />
           </div>
           <div className="bookshelves-main-container">
             <div className="filter-name-search-container">

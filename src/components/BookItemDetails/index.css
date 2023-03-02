@@ -1,0 +1,135 @@
+.book-details-bg-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  padding: 2%;
+}
+
+.book-details-main-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+  background-color: #ffffff;
+  margin-bottom: 4%;
+  border-radius: 15px;
+}
+
+.cover-details-container {
+  display: flex;
+  height: 280px;
+  align-items: center;
+  justify-content: space-between;
+  width: 45%;
+  padding: 4%;
+  margin: 40px;
+}
+
+.details-cover-image {
+  height: 280px;
+  width: 220px;
+  border-radius: 20px;
+}
+
+.details-container {
+  height: 280px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+}
+
+.details-book-name {
+  font-size: 32px;
+  color: #334155;
+  margin-bottom: 5px;
+}
+
+.details-author-name {
+  font-size: 24px;
+  color: #475569;
+  margin-bottom: 5px;
+}
+.details-rating-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.details-avg-rating {
+  font-size: 24px;
+  color: #475569;
+}
+
+.details-star-icon {
+  color: #fbbf24;
+  font-size: 24px;
+}
+.details-status {
+  font-size: 24px;
+  margin-top: 0px;
+  color: #475569;
+}
+.details-read-status {
+  color: #0284c7;
+}
+
+.h-line {
+  color: #94a3b8;
+  height: 1px;
+  width: 82%;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  padding: 4%;
+}
+
+.about-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.about-para {
+  font-size: 16px;
+  color: #475569;
+}
+
+.failure-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-failure-btn {
+  background-color: #0284c7;
+  width: 112px;
+  height: 48px;
+  border: 0px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.books-failure-image {
+  width: 500px;
+  height: 250px;
+}
+
+.books-failure-heading {
+  font-size: 24px;
+  color: #334155;
+}
