@@ -48,9 +48,11 @@
 
 .failure-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 70vh;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  align-self: center;
 }
 
 .books-failure-btn {

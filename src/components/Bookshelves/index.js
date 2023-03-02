@@ -64,6 +64,10 @@ class BookShelves extends Component {
     readStatus: books.read_status,
   })
 
+  onClickRetry = () => {
+    this.getBooks()
+  }
+
   onSubmitSearch = event => {
     event.preventDefault()
     this.getBooks()
