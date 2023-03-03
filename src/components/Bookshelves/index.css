@@ -74,3 +74,53 @@
   flex-wrap: wrap;
   align-items: flex-start;
 }
+
+.bookshelves-heading {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar-container {
+    display: none;
+  }
+  .bookshelves-bg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+  .filter-name-search-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .search-container {
+    order: 0;
+  }
+  .bookshelves-main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+    margin: 0px;
+  }
+  .books-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding-left: 0px;
+  }
+  .active-tab-name {
+    display: none;
+  }
+  .bookshelves-heading {
+    display: block;
+    align-self: flex-start;
+    text-align: left;
+  }
+  .search-container {
+    align-items: flex-start;
+  }
+}

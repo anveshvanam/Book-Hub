@@ -194,7 +194,7 @@ class BookShelves extends Component {
           </div>
           <div className="bookshelves-main-container">
             <div className="filter-name-search-container">
-              <h1 className="heading">{activeTabName} Books</h1>
+              <h1 className="active-tab-name">{activeTabName} Books</h1>
               <form className="search-container" onSubmit={this.onSubmitSearch}>
                 <input
                   type="search"
@@ -207,6 +207,7 @@ class BookShelves extends Component {
                 </button>
               </form>
             </div>
+            <h1 className="bookshelves-heading">Bookshelves</h1>
             <ul className="books-container">{this.renderBooks()}</ul>
           </div>
         </div>

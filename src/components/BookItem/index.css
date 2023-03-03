@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: flex-start;
   margin: 20px;
-  color: ;
 }
 
 .book-item-image {
@@ -93,4 +92,30 @@
 .no-match-paragraph {
   font-size: 24px;
   color: #334155;
+}
+
+@media screen and (max-width: 768px) {
+  .book-item-image {
+    height: 155px;
+    width: 135px;
+  }
+  .book-name {
+    font-size: 16px;
+  }
+  .author-name {
+    font-size: 14px;
+  }
+  .book-item-details {
+    padding: 0px;
+    width: 145px;
+  }
+  .book-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+  .link-item {
+    width: 100%;
+  }
 }
