@@ -190,6 +190,7 @@ class BookShelves extends Component {
             <Sidebar
               bookshelvesList={bookshelvesList}
               updateActiveTab={this.updateActiveTab}
+              activeTab={activeTab}
             />
           </div>
           <div className="bookshelves-main-container">

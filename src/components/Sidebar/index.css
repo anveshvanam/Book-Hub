@@ -16,6 +16,7 @@
   height: 170px;
   width: 100%;
   margin-left: 0px;
+  margin-top: 0px;
 }
 
 .filter-button {
@@ -38,9 +39,15 @@
   align-self: flex-start;
 }
 
-.bookshelves-heading {
+.bookshelves-heading-sidebar {
   color: #334155;
   width: 100%;
   font-size: 20px;
   padding: 40px;
+  margin: 0px;
+}
+
+.active-tab-item {
+  font-weight: 600;
+  color: #0284c7;
 }

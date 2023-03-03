@@ -2,20 +2,24 @@ import {Component} from 'react'
 import './index.css'
 
 const Sidebar = props => {
-  const {bookshelvesList, updateActiveTab} = props
+  const {bookshelvesList, updateActiveTab, activeTab} = props
 
-  const onClickFilter = filter => {}
+  const onClickFilter = filter => {
+    updateActiveTab(filter)
+  }
 
   return (
     <div className="sidebar">
-      <h1 className="bookshelves-heading">Bookshelves</h1>
+      <h1 className="bookshelves-heading-sidebar">Bookshelves</h1>
       <ul className="filters-list">
         {bookshelvesList.map(eachItem => (
           <li className="filter-item" key={eachItem.id}>
             <button
               type="button"
-              className="filter-button"
-              onClick={onClickFilter(eachItem.value)}
+              className={`filter-button ${
+                activeTab === eachItem.value ? 'active-tab-item' : ''
+              }`}
+              onClick={() => onClickFilter(eachItem.value)}
             >
               {eachItem.label}
             </button>
