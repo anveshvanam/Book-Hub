@@ -73,10 +73,6 @@ class BookShelves extends Component {
     this.getBooks()
   }
 
-  updateActiveTab = filter => {
-    this.setState({activeTab: filter})
-  }
-
   getBooks = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const {searchText, activeTab} = this.state
@@ -164,6 +160,10 @@ class BookShelves extends Component {
     </div>
   )
 
+  updateActiveTab = filter => {
+    this.setState({activeTab: filter}, this.getBooks)
+  }
+
   renderBooks = () => {
     const {apiStatus} = this.state
 
@@ -180,7 +180,7 @@ class BookShelves extends Component {
   }
 
   render() {
-    const {activeTabName, booksList} = this.state
+    const {activeTabName, activeTab, booksList} = this.state
 
     return (
       <>
@@ -208,6 +208,23 @@ class BookShelves extends Component {
               </form>
             </div>
             <h1 className="bookshelves-heading">Bookshelves</h1>
+            <ul className="responsive-filters-container">
+              {bookshelvesList.map(eachFilter => (
+                <li className="responsive-filter-item" key={eachFilter.id}>
+                  <button
+                    type="button"
+                    className={`responsive-filter-btn ${
+                      activeTab === eachFilter.value
+                        ? 'active-responsive-filter'
+                        : ''
+                    }`}
+                    onClick={() => this.updateActiveTab(eachFilter.value)}
+                  >
+                    {eachFilter.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
             <ul className="books-container">{this.renderBooks()}</ul>
           </div>
         </div>
