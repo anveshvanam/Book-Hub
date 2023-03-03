@@ -77,6 +77,26 @@ class Home extends Component {
     }
   }
 
+  renderFailureView = () => (
+    <div className="failure-container">
+      <img
+        className="books-failure-image"
+        src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+        alt="failure view"
+      />
+      <p className="books-failure-heading">
+        Something went wrong. Please try Again.
+      </p>
+      <button
+        className="books-failure-btn"
+        onClick={this.onClickRetry}
+        type="button"
+      >
+        Try Again
+      </button>
+    </div>
+  )
+
   renderSliderLoadingView = () => (
     <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#0284C7" height={50} width={50} />
@@ -91,10 +111,16 @@ class Home extends Component {
         return this.renderSliderSuccessView()
       case apiStatusConstants.inProgress:
         return this.renderSliderLoadingView()
-
+      case apiStatusConstants.failure:
+        return this.renderFailureView()
       default:
         return null
     }
+  }
+
+  onClickFindBooks = () => {
+    const {history} = this.props
+    history.push('/shelf')
   }
 
   renderSliderSuccessView = () => {
