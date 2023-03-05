@@ -35,7 +35,7 @@ class Header extends Component {
             <img
               src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406294/logo_r0zrx8.png"
               className="website-logo"
-              alt="website-logo"
+              alt="website logo"
             />
           </Link>
           <ul className="tabs-container">

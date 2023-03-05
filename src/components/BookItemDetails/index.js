@@ -80,7 +80,7 @@ class BookItemDetails extends Component {
     return (
       <div className="book-details-main-container">
         <div className="cover-details-container">
-          <img src={coverPic} alt="cover" className="details-cover-image" />
+          <img src={coverPic} alt={title} className="details-cover-image" />
           <div className="details-container">
             <h1 className="details-book-name">{title}</h1>
             <p className="details-author-name">{authorName}</p>
@@ -90,8 +90,7 @@ class BookItemDetails extends Component {
               <p className="details-avg-rating">{rating}</p>
             </div>
             <p className="details-status">
-              Read Status :{' '}
-              <span className="details-read-status">{readStatus}</span>{' '}
+              Status: <span className="details-read-status">{readStatus}</span>{' '}
             </p>
           </div>
         </div>
@@ -116,7 +115,7 @@ class BookItemDetails extends Component {
     <div className="failure-container">
       <img
         className="books-failure-image"
-        src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+        src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406194/bookshelves-failure_ikax1p.png"
         alt="failure view"
       />
       <p className="books-failure-heading">

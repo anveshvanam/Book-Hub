@@ -1,7 +1,6 @@
 import './index.css'
 import {Link} from 'react-router-dom'
 import {BsFillStarFill} from 'react-icons/bs'
-import {read} from 'fs'
 
 const BookItem = props => {
   const {itemDetails} = props
@@ -9,13 +8,13 @@ const BookItem = props => {
 
   return (
     <Link to={`/books/${id}`} className="link-item">
-      <li className="book-item">
-        <img src={coverPic} alt="cover" className="book-item-image" />
+      <li test-id="bookItem" className="book-item">
+        <img src={coverPic} alt={title} className="book-item-image" />
         <div className="book-item-details">
-          <p className="book-name">{title}</p>
+          <h1 className="book-name">{title}</h1>
           <p className="author-name">{authorName}</p>
           <div className="rating-container">
-            <p className="avg-rating">Av Rating</p>
+            <p className="avg-rating">Avg Rating</p>
             <BsFillStarFill className="star-icon" />
             <p className="avg-rating">{rating}</p>
           </div>

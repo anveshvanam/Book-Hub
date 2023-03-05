@@ -109,7 +109,7 @@ class BookShelves extends Component {
     <div className="failure-container">
       <img
         className="books-failure-image"
-        src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+        src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406194/bookshelves-failure_ikax1p.png"
         alt="failure view"
       />
       <p className="books-failure-heading">
@@ -131,7 +131,7 @@ class BookShelves extends Component {
       <div className="no-match-found-container">
         <img
           className="no-match-image"
-          src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+          src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406176/book-search-not-found_wnh3jp.png"
           alt="no books"
         />
         <p className="no-match-paragraph">
@@ -180,7 +180,7 @@ class BookShelves extends Component {
   }
 
   render() {
-    const {activeTabName, activeTab, booksList} = this.state
+    const {activeTabName, activeTab, searchText} = this.state
 
     return (
       <>
@@ -202,8 +202,13 @@ class BookShelves extends Component {
                   className="search-input"
                   placeholder="Search"
                   onChange={this.onChangeSearchInput}
+                  value={searchText}
                 />
-                <button type="submit" className="search-button">
+                <button
+                  type="submit"
+                  className="search-button"
+                  testid="searchButton"
+                >
                   <BsSearch className="search-icon" />
                 </button>
               </form>

@@ -63,7 +63,7 @@ class LoginPage extends Component {
           <img
             src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406211/cup_max9mr.png"
             className="bookhub-image"
-            alt="bookhub"
+            alt="login website logo"
           />
         </div>
         <div className="login-form-container">
@@ -71,7 +71,7 @@ class LoginPage extends Component {
             <img
               src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406294/logo_r0zrx8.png"
               className="website-logo"
-              alt="website-logo"
+              alt="website login"
             />
             <label className="label" htmlFor="userInput">
               Username*

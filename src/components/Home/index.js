@@ -81,7 +81,7 @@ class Home extends Component {
     <div className="failure-container">
       <img
         className="books-failure-image"
-        src="https://res.cloudinary.com/dkxxgpzd8/image/upload/v1647250727/Screenshot_30_uavmge.png"
+        src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406194/bookshelves-failure_ikax1p.png"
         alt="failure view"
       />
       <p className="books-failure-heading">
@@ -132,7 +132,7 @@ class Home extends Component {
           const {id, title, coverPic, authorName} = eachBook
 
           return (
-            <div className="top-rated-book-item-container" key={id}>
+            <div className="top-rated-book-item-container" key={title}>
               <Link to={`/books/${id}`} className="nav-link">
                 <div className="top-rated-book-image-container">
                   <img
@@ -162,7 +162,7 @@ class Home extends Component {
             Find Your Next Favorite Books?
           </h1>
           <p className="home-paragraph">
-            You are in the right place. Tell us what titles or genres you have
+            Your are in the right place. Tell us what titles or genres you have
             enjoyed in the past, and we will give you surprisingly insightful
             recommendations.
           </p>

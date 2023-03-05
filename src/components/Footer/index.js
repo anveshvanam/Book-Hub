@@ -17,7 +17,7 @@ const Footer = () => (
         <FaYoutube className="footer-icon" />
       </li>
     </ul>
-    <p className="contact-us">Contact Us</p>
+    <p className="contact-us">Contact us</p>
   </div>
 )
 
