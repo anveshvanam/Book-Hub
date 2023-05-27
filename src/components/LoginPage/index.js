@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
+import Popup from 'reactjs-popup'
 
 import './index.css'
 
@@ -59,6 +60,24 @@ class LoginPage extends Component {
 
     return (
       <div className="login-container">
+        <Popup modal open="true">
+          {close => (
+            <>
+              <div className="popup">
+                <h1>Sample Login Detatils : </h1>
+                <p>username: rahul</p>
+                <p>password: rahul@2021</p>
+                <button
+                  type="button"
+                  className="trigger-button"
+                  onClick={() => close()}
+                >
+                  Close
+                </button>
+              </div>
+            </>
+          )}
+        </Popup>
         <div className="image-logo-container">
           <img
             src="https://res.cloudinary.com/dq9eefxnb/image/upload/v1677406211/cup_max9mr.png"
