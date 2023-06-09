@@ -68,7 +68,6 @@ class BookItemDetails extends Component {
   renderBookDetailsSuccessView = () => {
     const {bookDetails} = this.state
     const {
-      id,
       title,
       authorName,
       coverPic,

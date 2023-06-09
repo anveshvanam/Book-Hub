@@ -80,6 +80,10 @@
 }
 .responsive-filters-container {
   display: none;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 @media screen and (max-width: 768px) {
